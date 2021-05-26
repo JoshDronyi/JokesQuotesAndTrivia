@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.example.jokesquotesandtrivia.uiLayer.MainFragment"
+        android:label="MainFragment"
+        tools:layout="@layout/fragment_main">
+        <action
+            android:id="@+id/action_mainFragment_to_triviaFragment"
+            app:destination="@id/triviaFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_jokesFragment"
+            app:destination="@id/jokesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/triviaFragment"
+        android:name="com.example.jokesquotesandtrivia.uiLayer.TriviaFragment"
+        android:label="fragment_trivia"
+        tools:layout="@layout/fragment_trivia" >
+        <action
+            android:id="@+id/action_triviaFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/jokesFragment"
+        android:name="com.example.jokesquotesandtrivia.uiLayer.JokesFragment"
+        android:label="fragment_jokes"
+        tools:layout="@layout/fragment_jokes" >
+        <action
+            android:id="@+id/action_jokesFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+    </fragment>
+
+</navigation>
