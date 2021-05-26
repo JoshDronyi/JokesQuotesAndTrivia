@@ -1,0 +1,2 @@
+com/example/jokesquotesandtrivia/BuildConfig.java
+ com.example.jokesquotesandtrivia.BuildConfig
