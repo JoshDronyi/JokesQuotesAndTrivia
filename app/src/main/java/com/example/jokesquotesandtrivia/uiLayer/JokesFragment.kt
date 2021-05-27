@@ -1,5 +1,6 @@
 package com.example.jokesquotesandtrivia.uiLayer
 
+import android.content.Context
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -29,6 +30,11 @@ class JokesFragment : Fragment() {
         ViewModelProvider.NewInstanceFactory().create(MainViewModel::class.java)
     }
 
+    override fun onAttach(context: Context) {
+        super.onAttach(context)
+        mainViewModel.getRandomJoke()
+    }
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -41,9 +47,14 @@ class JokesFragment : Fragment() {
         newQuote = theView.findViewById(R.id.newQuote)
         exitButton = theView.findViewById(R.id.exit)
 
-        mainViewModel.getRandomJoke()
+        setUpObservables()
 
+        setUpClickListeners()
 
+        return theView
+    }
+
+    private fun setUpClickListeners() {
         newJoke.setOnClickListener {
             mainViewModel.getRandomJoke()
         }
@@ -54,7 +65,9 @@ class JokesFragment : Fragment() {
         exitButton.setOnClickListener {
             this.findNavController().navigate(R.id.mainFragment)
         }
+    }
 
+    private fun setUpObservables() {
         mainViewModel.currentJoke.observe(viewLifecycleOwner,{
             currentJoke = it
             jokeText.text = currentJoke?.joke
@@ -63,7 +76,6 @@ class JokesFragment : Fragment() {
             currentQuote = it
             jokeText.text = "Quote: ${currentQuote?.quoteText} \n\nAuthor: ${currentQuote?.quoteAuthor}"
         })
-        return theView
     }
 
     companion object {

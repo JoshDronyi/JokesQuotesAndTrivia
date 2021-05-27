@@ -1,5 +1,6 @@
 package com.example.jokesquotesandtrivia.uiLayer
 
+import android.content.Context
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -12,6 +13,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.findNavController
 import com.example.jokesquotesandtrivia.R
+import com.example.jokesquotesandtrivia.businessLayer.DEFAULT_GAME_SIZE
 import com.example.jokesquotesandtrivia.businessLayer.viewModels.MainViewModel
 import com.example.jokesquotesandtrivia.dataLayer.model.TriviaQuestion
 import com.google.android.material.button.MaterialButton
@@ -20,9 +22,6 @@ import com.google.android.material.textview.MaterialTextView
 
 
 class TriviaFragment : Fragment() {
-    private val TRIVIA_FRAGMENT: String = "trivia_fragment"
-    private val DEFAULT_GAME_SIZE: Int = 10
-    private val MULTIPLE_CHOICE: String = "multiple"
     private val TRUE_FALSE: String = "boolean"
 
     var currentGameQuestions: List<TriviaQuestion> = listOf()
@@ -36,6 +35,7 @@ class TriviaFragment : Fragment() {
     }
 
     lateinit var questionText: MaterialTextView
+    lateinit var scoreText: MaterialTextView
     lateinit var submit: MaterialButton
     lateinit var exit: MaterialButton
 
@@ -48,19 +48,20 @@ class TriviaFragment : Fragment() {
     lateinit var theView: View
 
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-
+    override fun onAttach(context: Context) {
+        super.onAttach(context)
+        mainViewModel.getTriviaQuestions(DEFAULT_GAME_SIZE)
     }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         // Inflate the layout for this fragment
         theView = inflater.inflate(R.layout.fragment_trivia, container, false)
 
         questionText = theView.findViewById(R.id.triviaQuestion)
+        scoreText = theView.findViewById(R.id.scoreText)
         submit = theView.findViewById(R.id.submit)
         exit = theView.findViewById(R.id.exit)
 
@@ -70,10 +71,17 @@ class TriviaFragment : Fragment() {
         option4 = theView.findViewById(R.id.option4)
         answerGroup = theView.findViewById(R.id.answerGroup)
 
+        val scoreString = getString(R.string.score, score, currentGameQuestions.size)
+        scoreText.text = scoreString
+
         setUpObservables()
 
-        mainViewModel.getTriviaQuestions(DEFAULT_GAME_SIZE)
+        setClickListeners()
 
+        return theView
+    }
+
+    private fun setClickListeners() {
         exit.setOnClickListener {
             theView.findNavController().navigate(R.id.mainFragment)
         }
@@ -89,19 +97,19 @@ class TriviaFragment : Fragment() {
             }
         }
 
-        return theView
-
     }
 
     private fun displayScore() {
-        questionText.text =
+        val scoreString =
             "Your total score was $score/${currentGameQuestions.size} \n Thanks for playing!"
+        questionText.text = scoreString
         answerGroup.isVisible = false
     }
 
     private fun setQuestion(question: TriviaQuestion) {
-        questionText.text = question.question
-        var options: MutableList<String> = mutableListOf()
+        val scoreString = "Question #${currentQuestionIndex + 1}: \n ${question.question}"
+        questionText.text = scoreString
+        val options: MutableList<String> = mutableListOf()
 
         question.incorrectAnswers.forEach {
             options.add(it)
@@ -140,6 +148,9 @@ class TriviaFragment : Fragment() {
         } else {
             Toast.makeText(context, "Sorry, incorrect answer", Toast.LENGTH_SHORT).show()
         }
+
+        val scoreString = getString(R.string.score, score, currentGameQuestions.size)
+        scoreText.text = scoreString
         checkAnswer = false
     }
 

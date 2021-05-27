@@ -1920,7 +1920,9 @@ id fragment_container_view_tag
 id ghost_view
 id ghost_view_holder
 id glHeading
+id glOptionsTop
 id glTextBottom
+id glbuttonTop
 id gone
 id graph
 id graph_wrap
@@ -2068,6 +2070,7 @@ id save_non_transition_alpha
 id save_overlay_view
 id sawtooth
 id scale
+id scoreText
 id screen
 id scroll
 id scrollIndicatorDown
@@ -2170,7 +2173,6 @@ id triangle
 id triviaButton
 id triviaFragment
 id triviaQuestion
-id triviaTitle
 id unchecked
 id uniform
 id unlabeled

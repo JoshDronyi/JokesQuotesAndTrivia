@@ -6,11 +6,18 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.example.jokesquotesandtrivia.R
+import com.example.jokesquotesandtrivia.businessLayer.DEFAULT_GAME_SIZE
+import com.example.jokesquotesandtrivia.businessLayer.viewModels.MainViewModel
 import com.google.android.material.button.MaterialButton
 
 class MainFragment: Fragment() {
+
+    val mainViewModel: MainViewModel by lazy{
+        ViewModelProvider.NewInstanceFactory().create(MainViewModel::class.java)
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -25,12 +32,10 @@ class MainFragment: Fragment() {
 
 
         jokeButton?.setOnClickListener {
-            Toast.makeText(context,"Jokes and Quotes requested.",Toast.LENGTH_SHORT).show()
             controller.navigate(R.id.jokesFragment)
         }
 
         triviaButton?.setOnClickListener {
-            Toast.makeText(context,"Trivia requested.",Toast.LENGTH_SHORT).show()
             controller.navigate(R.id.triviaFragment)
         }
 
