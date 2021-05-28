@@ -14,6 +14,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.findNavController
 import com.example.jokesquotesandtrivia.R
 import com.example.jokesquotesandtrivia.businessLayer.DEFAULT_GAME_SIZE
+import com.example.jokesquotesandtrivia.businessLayer.cleanText
 import com.example.jokesquotesandtrivia.businessLayer.viewModels.MainViewModel
 import com.example.jokesquotesandtrivia.dataLayer.model.TriviaQuestion
 import com.google.android.material.button.MaterialButton
@@ -49,8 +50,8 @@ class TriviaFragment : Fragment() {
 
 
     override fun onAttach(context: Context) {
-        super.onAttach(context)
         mainViewModel.getTriviaQuestions(DEFAULT_GAME_SIZE)
+        super.onAttach(context)
     }
 
     override fun onCreateView(
@@ -107,14 +108,15 @@ class TriviaFragment : Fragment() {
     }
 
     private fun setQuestion(question: TriviaQuestion) {
-        val scoreString = "Question #${currentQuestionIndex + 1}: \n ${question.question}"
+        val scoreString =
+            "Question #${currentQuestionIndex + 1}: \n\n ${question.question.cleanText()}"
         questionText.text = scoreString
         val options: MutableList<String> = mutableListOf()
 
         question.incorrectAnswers.forEach {
-            options.add(it)
+            options.add(it.cleanText())
         }
-        options.add(question.correctAnswer)
+        options.add(question.correctAnswer.cleanText())
         options.shuffle()
 
         when (question.type) {

@@ -21,18 +21,18 @@ class JokesFragment : Fragment() {
     var currentJoke: Joke? = null
     var currentQuote: Quote? = null
 
-    lateinit var jokeText:MaterialTextView
-    lateinit var newJoke:MaterialButton
+    lateinit var jokeText: MaterialTextView
+    lateinit var newJoke: MaterialButton
     lateinit var newQuote: MaterialButton
-    lateinit var exitButton:MaterialButton
+    lateinit var exitButton: MaterialButton
 
     val mainViewModel by lazy {
         ViewModelProvider.NewInstanceFactory().create(MainViewModel::class.java)
     }
 
     override fun onAttach(context: Context) {
-        super.onAttach(context)
         mainViewModel.getRandomJoke()
+        super.onAttach(context)
     }
 
     override fun onCreateView(
@@ -68,13 +68,14 @@ class JokesFragment : Fragment() {
     }
 
     private fun setUpObservables() {
-        mainViewModel.currentJoke.observe(viewLifecycleOwner,{
+        mainViewModel.currentJoke.observe(viewLifecycleOwner, {
             currentJoke = it
             jokeText.text = currentJoke?.joke
         })
-        mainViewModel.currentQuote.observe(viewLifecycleOwner,{
+        mainViewModel.currentQuote.observe(viewLifecycleOwner, {
             currentQuote = it
-            jokeText.text = "Quote: ${currentQuote?.quoteText} \n\nAuthor: ${currentQuote?.quoteAuthor}"
+            jokeText.text =
+                "Quote: ${currentQuote?.quoteText} \n\nAuthor: ${currentQuote?.quoteAuthor}"
         })
     }
 
