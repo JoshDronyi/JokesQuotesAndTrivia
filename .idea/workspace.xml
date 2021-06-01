@@ -31,20 +31,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e7ad1430-84df-4fcd-8336-287c30fe114e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gradle/6.7.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.7.1/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/checksums/md5-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/md5-checksums.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/sha1-checksums.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/app/JokesQuotesAndTrivia.app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/app/JokesQuotesAndTrivia.app.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/jokesquotesandtrivia/businessLayer/UTILS.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/jokesquotesandtrivia/businessLayer/UTILS.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/jokesquotesandtrivia/uiLayer/JokesFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/jokesquotesandtrivia/uiLayer/JokesFragment.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/jokesquotesandtrivia/uiLayer/MainFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/jokesquotesandtrivia/uiLayer/MainFragment.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/jokesquotesandtrivia/uiLayer/TriviaFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/jokesquotesandtrivia/uiLayer/TriviaFragment.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/compile_and_runtime_not_namespaced_r_class_jar/debug/R.jar" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/compile_and_runtime_not_namespaced_r_class_jar/debug/R.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/example/jokesquotesandtrivia/businessLayer/UTILSKt.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/example/jokesquotesandtrivia/businessLayer/UTILSKt.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/example/jokesquotesandtrivia/uiLayer/JokesFragment$mainViewModel$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/example/jokesquotesandtrivia/uiLayer/JokesFragment$mainViewModel$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/example/jokesquotesandtrivia/uiLayer/JokesFragment.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/example/jokesquotesandtrivia/uiLayer/JokesFragment.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/example/jokesquotesandtrivia/uiLayer/MainFragment.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/example/jokesquotesandtrivia/uiLayer/MainFragment.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/example/jokesquotesandtrivia/uiLayer/TriviaFragment$Companion.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/example/jokesquotesandtrivia/uiLayer/TriviaFragment$Companion.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/example/jokesquotesandtrivia/uiLayer/TriviaFragment$mainViewModel$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/example/jokesquotesandtrivia/uiLayer/TriviaFragment$mainViewModel$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/example/jokesquotesandtrivia/uiLayer/TriviaFragment.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/example/jokesquotesandtrivia/uiLayer/TriviaFragment.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -146,7 +141,7 @@
     <property name="DeviceAndSnapshotComboBoxAction.selectionTime" value="2021-05-24T17:57:24.624168900Z" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
@@ -329,10 +324,10 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="430" y="184" key="MultipleFileMergeDialog/0.0.1600.860@0.0.1600.860" timestamp="1622069566402" />
-    <state x="176" y="2" key="SettingsEditor" timestamp="1622066266800">
+    <state x="176" y="2" key="SettingsEditor" timestamp="1622591668041">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="176" y="2" key="SettingsEditor/0.0.1600.860@0.0.1600.860" timestamp="1622066266800" />
+    <state x="176" y="2" key="SettingsEditor/0.0.1600.860@0.0.1600.860" timestamp="1622591668041" />
     <state x="92" y="92" width="1416" height="676" key="ShowDiffWithBranchDialog" timestamp="1622070857163">
       <screen x="0" y="0" width="1600" height="860" />
     </state>

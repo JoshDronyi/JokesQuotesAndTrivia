@@ -4,7 +4,7 @@
             "outputFile": "C:\\Users\\joshu\\AndroidStudioProjects\\JokesQuotesAndTrivia\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v24\\values-v24.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\joshu\\.gradle\\caches\\transforms-2\\files-2.1\\ec12e669f56e78180171dbf420f3046e\\appcompat-1.2.0\\res\\values-v24\\values-v24.xml",
+                    "source": "C:\\Users\\joshu\\.gradle\\caches\\transforms-2\\files-2.1\\468665f1075a99ba7588939b5577d0f9\\appcompat-1.2.0\\res\\values-v24\\values-v24.xml",
                     "from": {
                         "startLines": "2,3",
                         "startColumns": "4,4",
@@ -14,7 +14,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\joshu\\.gradle\\caches\\transforms-2\\files-2.1\\409c5e33421b64af73f5184316f32244\\media-1.0.0\\res\\values-v24\\values-v24.xml",
+                    "source": "C:\\Users\\joshu\\.gradle\\caches\\transforms-2\\files-2.1\\dbbcef3e9dd11c5f3322075925ad04f9\\media-1.0.0\\res\\values-v24\\values-v24.xml",
                     "from": {
                         "startLines": "2,3,4,5",
                         "startColumns": "4,4,4,4",

@@ -1,2 +1,12 @@
+com/example/jokesquotesandtrivia/databinding/FragmentTriviaBinding.java
+ com.example.jokesquotesandtrivia.databinding.FragmentTriviaBinding
 com/example/jokesquotesandtrivia/BuildConfig.java
  com.example.jokesquotesandtrivia.BuildConfig
+com/example/jokesquotesandtrivia/databinding/FragmentMainBinding.java
+ com.example.jokesquotesandtrivia.databinding.FragmentMainBinding
+com/example/jokesquotesandtrivia/databinding/FragmentQuotesBinding.java
+ com.example.jokesquotesandtrivia.databinding.FragmentQuotesBinding
+com/example/jokesquotesandtrivia/databinding/FragmentJokesBinding.java
+ com.example.jokesquotesandtrivia.databinding.FragmentJokesBinding
+com/example/jokesquotesandtrivia/databinding/ActivityMainBinding.java
+ com.example.jokesquotesandtrivia.databinding.ActivityMainBinding
