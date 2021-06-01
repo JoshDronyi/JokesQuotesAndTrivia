@@ -12,19 +12,17 @@ import com.example.jokesquotesandtrivia.R
 import com.example.jokesquotesandtrivia.businessLayer.viewModels.MainViewModel
 import com.example.jokesquotesandtrivia.dataLayer.model.Joke
 import com.example.jokesquotesandtrivia.dataLayer.model.Quote
-import com.google.android.material.button.MaterialButton
-import com.google.android.material.textview.MaterialTextView
+import com.example.jokesquotesandtrivia.databinding.FragmentJokesBinding
 
 class JokesFragment : Fragment() {
+
+    private var _jokesBinding: FragmentJokesBinding? = null
+    val jokesBinding get() = _jokesBinding!!
 
     lateinit var theView: View
     var currentJoke: Joke? = null
     var currentQuote: Quote? = null
 
-    lateinit var jokeText: MaterialTextView
-    lateinit var newJoke: MaterialButton
-    lateinit var newQuote: MaterialButton
-    lateinit var exitButton: MaterialButton
 
     val mainViewModel by lazy {
         ViewModelProvider.NewInstanceFactory().create(MainViewModel::class.java)
@@ -40,12 +38,7 @@ class JokesFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        theView = inflater.inflate(R.layout.fragment_jokes, container, false)
-
-        jokeText = theView.findViewById(R.id.jokeText)
-        newJoke = theView.findViewById(R.id.newJoke)
-        newQuote = theView.findViewById(R.id.newQuote)
-        exitButton = theView.findViewById(R.id.exit)
+        _jokesBinding = FragmentJokesBinding.inflate(inflater, container, false)
 
         setUpObservables()
 
@@ -55,14 +48,14 @@ class JokesFragment : Fragment() {
     }
 
     private fun setUpClickListeners() {
-        newJoke.setOnClickListener {
+        jokesBinding.newJoke.setOnClickListener {
             mainViewModel.getRandomJoke()
         }
 
-        newQuote.setOnClickListener {
+        jokesBinding.newQuote.setOnClickListener {
             mainViewModel.getQuote()
         }
-        exitButton.setOnClickListener {
+        jokesBinding.exit.setOnClickListener {
             this.findNavController().navigate(R.id.mainFragment)
         }
     }
@@ -70,13 +63,20 @@ class JokesFragment : Fragment() {
     private fun setUpObservables() {
         mainViewModel.currentJoke.observe(viewLifecycleOwner, {
             currentJoke = it
-            jokeText.text = currentJoke?.joke
+            jokesBinding.jokeText.text = currentJoke?.joke
         })
         mainViewModel.currentQuote.observe(viewLifecycleOwner, {
             currentQuote = it
-            jokeText.text =
+            var jokeString =
                 "Quote: ${currentQuote?.quoteText} \n\nAuthor: ${currentQuote?.quoteAuthor}"
+            jokesBinding.jokeText.text = jokeString
+
         })
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        _jokesBinding = null
     }
 
     companion object {

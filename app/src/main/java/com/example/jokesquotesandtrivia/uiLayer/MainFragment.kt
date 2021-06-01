@@ -7,34 +7,40 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.example.jokesquotesandtrivia.R
-import com.google.android.material.button.MaterialButton
+import com.example.jokesquotesandtrivia.databinding.FragmentMainBinding
 
 class MainFragment : Fragment() {
 
+    private var _binding: FragmentMainBinding? = null
+
+    val binding get() = _binding!!
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val theView = inflater.inflate(R.layout.fragment_main, container, false)
+        val mainBinding = FragmentMainBinding.inflate(inflater, container, false)
 
-        val jokeButton = theView?.findViewById<MaterialButton>(R.id.jokeQuoteButton)
-        val triviaButton = theView?.findViewById<MaterialButton>(R.id.triviaButton)
         val controller = this.findNavController()
 
 
-        jokeButton?.setOnClickListener {
+        binding.jokeQuoteButton.setOnClickListener {
             controller.navigate(R.id.jokesFragment)
         }
 
-        triviaButton?.setOnClickListener {
+        binding.triviaButton.setOnClickListener {
             controller.navigate(R.id.triviaFragment)
         }
 
         super.onCreateView(inflater, container, savedInstanceState)
 
-        return theView
+        return mainBinding.root
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        _binding = null
     }
 
 

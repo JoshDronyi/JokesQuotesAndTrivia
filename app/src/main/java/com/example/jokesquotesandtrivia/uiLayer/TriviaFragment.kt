@@ -1,13 +1,14 @@
 package com.example.jokesquotesandtrivia.uiLayer
 
 import android.content.Context
+import android.graphics.Color
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.RadioButton
-import android.widget.RadioGroup
 import android.widget.Toast
+import androidx.core.view.get
 import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
@@ -17,9 +18,7 @@ import com.example.jokesquotesandtrivia.businessLayer.DEFAULT_GAME_SIZE
 import com.example.jokesquotesandtrivia.businessLayer.cleanText
 import com.example.jokesquotesandtrivia.businessLayer.viewModels.MainViewModel
 import com.example.jokesquotesandtrivia.dataLayer.model.TriviaQuestion
-import com.google.android.material.button.MaterialButton
-import com.google.android.material.radiobutton.MaterialRadioButton
-import com.google.android.material.textview.MaterialTextView
+import com.example.jokesquotesandtrivia.databinding.FragmentTriviaBinding
 
 
 class TriviaFragment : Fragment() {
@@ -30,24 +29,15 @@ class TriviaFragment : Fragment() {
     var checkAnswer: Boolean = false
 
     var currentQuestionIndex = 0
+    var selectedID: Int = 0
+
+    private var _triviaBinding: FragmentTriviaBinding? = null
+    val triviaBinding = _triviaBinding!!
+
 
     val mainViewModel by lazy {
         ViewModelProvider.NewInstanceFactory().create(MainViewModel::class.java)
     }
-
-    lateinit var questionText: MaterialTextView
-    lateinit var scoreText: MaterialTextView
-    lateinit var submit: MaterialButton
-    lateinit var exit: MaterialButton
-
-
-    lateinit var answerGroup: RadioGroup
-    lateinit var option1: MaterialRadioButton
-    lateinit var option2: MaterialRadioButton
-    lateinit var option3: MaterialRadioButton
-    lateinit var option4: MaterialRadioButton
-    lateinit var theView: View
-
 
     override fun onAttach(context: Context) {
         mainViewModel.getTriviaQuestions(DEFAULT_GAME_SIZE)
@@ -59,35 +49,25 @@ class TriviaFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         // Inflate the layout for this fragment
-        theView = inflater.inflate(R.layout.fragment_trivia, container, false)
+        _triviaBinding = FragmentTriviaBinding.inflate(inflater, container, false)
 
-        questionText = theView.findViewById(R.id.triviaQuestion)
-        scoreText = theView.findViewById(R.id.scoreText)
-        submit = theView.findViewById(R.id.submit)
-        exit = theView.findViewById(R.id.exit)
-
-        option1 = theView.findViewById(R.id.option1)
-        option2 = theView.findViewById(R.id.option2)
-        option3 = theView.findViewById(R.id.option3)
-        option4 = theView.findViewById(R.id.option4)
-        answerGroup = theView.findViewById(R.id.answerGroup)
 
         val scoreString = getString(R.string.score, score, currentGameQuestions.size)
-        scoreText.text = scoreString
+        triviaBinding.scoreText.text = scoreString
 
         setUpObservables()
 
         setClickListeners()
 
-        return theView
+        return triviaBinding.root
     }
 
     private fun setClickListeners() {
-        exit.setOnClickListener {
-            theView.findNavController().navigate(R.id.mainFragment)
+        triviaBinding.exit.setOnClickListener {
+            triviaBinding.root.findNavController()?.navigate(R.id.mainFragment)
         }
 
-        submit.setOnClickListener {
+        triviaBinding.submit.setOnClickListener {
             if (checkAnswer) {
                 checkForCorrectAnswer()
                 if (++currentQuestionIndex < currentGameQuestions.size) {
@@ -98,19 +78,25 @@ class TriviaFragment : Fragment() {
             }
         }
 
+        triviaBinding.answerGroup.setOnCheckedChangeListener { group, checkedId ->
+            triviaBinding.answerGroup.setBackgroundColor(Color.LTGRAY)
+            selectedID = checkedId
+        }
+
     }
 
     private fun displayScore() {
         val scoreString =
             "Your total score was $score/${currentGameQuestions.size} \n Thanks for playing!"
-        questionText.text = scoreString
-        answerGroup.isVisible = false
+        triviaBinding.triviaQuestion.text = scoreString
+        triviaBinding.answerGroup.isVisible = false
     }
 
     private fun setQuestion(question: TriviaQuestion) {
         val scoreString =
             "Question #${currentQuestionIndex + 1}: \n\n ${question.question.cleanText()}"
-        questionText.text = scoreString
+        triviaBinding.triviaQuestion.text = scoreString
+
         val options: MutableList<String> = mutableListOf()
 
         question.incorrectAnswers.forEach {
@@ -121,19 +107,19 @@ class TriviaFragment : Fragment() {
 
         when (question.type) {
             TRUE_FALSE -> {
-                option1.text = options[0]
-                option2.text = options[1]
-                option3.isVisible = false
-                option4.isVisible = false
+                triviaBinding.option1.text = options[0]
+                triviaBinding.option2.text = options[1]
+                triviaBinding.option3.isVisible = false
+                triviaBinding.option4.isVisible = false
             }
             else -> {
-                option1.text = options[0]
-                option2.text = options[1]
-                option3.text = options[2]
-                option4.text = options[3]
+                triviaBinding.option1.text = options[0]
+                triviaBinding.option2.text = options[1]
+                triviaBinding.option3.text = options[2]
+                triviaBinding.option4.text = options[3]
 
-                option3.isVisible = true
-                option4.isVisible = true
+                triviaBinding.option3.isVisible = true
+                triviaBinding.option4.isVisible = true
 
             }
         }
@@ -141,18 +127,24 @@ class TriviaFragment : Fragment() {
     }
 
     private fun checkForCorrectAnswer() {
-        val selectedAnswer = theView.findViewById<RadioButton>(answerGroup.checkedRadioButtonId)
+
+        val selectedAnswer = triviaBinding.answerGroup[selectedID] as RadioButton
         val currentQuestion = currentGameQuestions[currentQuestionIndex]
 
         if (selectedAnswer.text.contentEquals(currentQuestion.correctAnswer)) {
             score++
             Toast.makeText(context, "CORRECT!!!!", Toast.LENGTH_SHORT).show()
         } else {
+            Toast.makeText(
+                context,
+                "selected ${selectedAnswer.text} but answer was ${currentQuestion.correctAnswer}",
+                Toast.LENGTH_SHORT
+            ).show()
             Toast.makeText(context, "Sorry, incorrect answer", Toast.LENGTH_SHORT).show()
         }
 
         val scoreString = getString(R.string.score, score, currentGameQuestions.size)
-        scoreText.text = scoreString
+        triviaBinding.scoreText.text = scoreString
         checkAnswer = false
     }
 
