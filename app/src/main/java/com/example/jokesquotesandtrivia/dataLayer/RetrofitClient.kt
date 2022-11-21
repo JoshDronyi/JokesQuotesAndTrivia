@@ -15,38 +15,38 @@ import retrofit2.Retrofit
 import retrofit2.converter.moshi.MoshiConverterFactory
 import java.lang.reflect.ParameterizedType
 
-class RetrofitClient {
-    companion object {
-        val moshi = Moshi.Builder()
-            .addLast(KotlinJsonAdapterFactory())
-            .build()
+object RetrofitClient {
 
-        val interceptor: HttpLoggingInterceptor =
-            HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.BODY)
-        val client: OkHttpClient = OkHttpClient.Builder().addInterceptor(interceptor).build()
+    private val moshi = Moshi.Builder()
+        .addLast(KotlinJsonAdapterFactory())
+        .build()
 
-        val retrofit = Retrofit.Builder()
-            .baseUrl(TRIVIA_BASE_URL)
-            .client(client)
-            .addConverterFactory(MoshiConverterFactory.create(moshi))
-            .build()
+    private val interceptor: HttpLoggingInterceptor =
+        HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.BODY)
+    private val client: OkHttpClient = OkHttpClient.Builder().addInterceptor(interceptor).build()
 
-
-        private val triviaListType: ParameterizedType =
-            Types.newParameterizedType(List::class.java, TriviaQuestion::class.java)
-
-        val triviaAdapter: JsonAdapter<List<TriviaQuestion>> = moshi.adapter(triviaListType)
-
-        fun jokeServiceInstance(): JokeRetrofitService =
-            retrofit.create(JokeRetrofitService::class.java)
-
-        fun quoteServiceInstance(): QuoteRetrofitService =
-            retrofit.create(QuoteRetrofitService::class.java)
+    private val retrofit: Retrofit = Retrofit.Builder()
+        .baseUrl(TRIVIA_BASE_URL)
+        .client(client)
+        .addConverterFactory(MoshiConverterFactory.create(moshi))
+        .build()
 
 
-        fun triviaServiceInstance(): TriviaService = retrofit.create(TriviaService::class.java)
-    }
+    private val triviaListType: ParameterizedType =
+        Types.newParameterizedType(List::class.java, TriviaQuestion::class.java)
+
+    val triviaAdapter: JsonAdapter<List<TriviaQuestion>> = moshi.adapter(triviaListType)
+
+    fun jokeServiceInstance(): JokeRetrofitService =
+        retrofit.create(JokeRetrofitService::class.java)
+
+    fun quoteServiceInstance(): QuoteRetrofitService =
+        retrofit.create(QuoteRetrofitService::class.java)
+
+
+    fun triviaServiceInstance(): TriviaService = retrofit.create(TriviaService::class.java)
 }
+
 
 
 

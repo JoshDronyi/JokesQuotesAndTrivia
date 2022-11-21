@@ -24,7 +24,7 @@ class JokesFragment : Fragment() {
     var currentQuote: Quote? = null
 
 
-    val mainViewModel by lazy {
+    private val mainViewModel by lazy {
         ViewModelProvider.NewInstanceFactory().create(MainViewModel::class.java)
     }
 

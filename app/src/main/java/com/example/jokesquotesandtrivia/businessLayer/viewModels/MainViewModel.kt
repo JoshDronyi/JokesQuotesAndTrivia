@@ -35,21 +35,20 @@ class MainViewModel : ViewModel() {
 
         withContext(Dispatchers.Main) {
             if (quoteResponse.statusCode == 200)
-            currentQuote.value = quoteResponse.Quotes[0]
+                currentQuote.value = quoteResponse.Quotes[0]
         }
         Log.e(JOSH_TAG, "Current quote was ${currentQuote.value}")
     }
 
     fun getTriviaQuestions(totalQuestions: Int) =
         viewModelScope.launch(Dispatchers.IO) {
-            val questionsResponse = RetrofitClient.triviaServiceInstance().getQuickGame(totalQuestions)
-            Log.e(JOSH_TAG,"GETTING GAME QUESTIONS")
+            val questionsResponse =
+                RetrofitClient.triviaServiceInstance().getQuickGame(totalQuestions)
+            Log.e(JOSH_TAG, "GETTING GAME QUESTIONS")
             val response = questionsResponse.await()
-            Log.e(JOSH_TAG, "getTriviaQuestions: QUESTION RESPONSE RETURNS", )
-            withContext(Dispatchers.Main){
+            Log.e(JOSH_TAG, "getTriviaQuestions: QUESTION RESPONSE RETURNS")
+            withContext(Dispatchers.Main) {
                 questionList.value = response.results
             }
         }
-
-
 }
