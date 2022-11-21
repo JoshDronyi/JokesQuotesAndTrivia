@@ -1,86 +1,86 @@
 [
     {
-        "merged": "C:\\Users\\joshu\\AndroidStudioProjects\\JokesQuotesAndTrivia\\app\\build\\intermediates\\res\\merged\\debug\\drawable_heading_background.xml.flat",
-        "source": "C:\\Users\\joshu\\AndroidStudioProjects\\JokesQuotesAndTrivia\\app\\src\\main\\res\\drawable\\heading_background.xml"
+        "merged": "com.example.jokesquotesandtrivia.app-merged_res-47:/layout_fragment_jokes.xml.flat",
+        "source": "com.example.jokesquotesandtrivia.app-main-49:/layout/fragment_jokes.xml"
     },
     {
-        "merged": "C:\\Users\\joshu\\AndroidStudioProjects\\JokesQuotesAndTrivia\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher.png.flat",
-        "source": "C:\\Users\\joshu\\AndroidStudioProjects\\JokesQuotesAndTrivia\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
+        "merged": "com.example.jokesquotesandtrivia.app-merged_res-47:/layout_fragment_quotes.xml.flat",
+        "source": "com.example.jokesquotesandtrivia.app-main-49:/layout/fragment_quotes.xml"
     },
     {
-        "merged": "C:\\Users\\joshu\\AndroidStudioProjects\\JokesQuotesAndTrivia\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher.png.flat",
-        "source": "C:\\Users\\joshu\\AndroidStudioProjects\\JokesQuotesAndTrivia\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.png"
+        "merged": "com.example.jokesquotesandtrivia.app-merged_res-47:/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "com.example.jokesquotesandtrivia.app-main-49:/mipmap-anydpi-v26/ic_launcher.xml"
     },
     {
-        "merged": "C:\\Users\\joshu\\AndroidStudioProjects\\JokesQuotesAndTrivia\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher.png.flat",
-        "source": "C:\\Users\\joshu\\AndroidStudioProjects\\JokesQuotesAndTrivia\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
+        "merged": "com.example.jokesquotesandtrivia.app-merged_res-47:/mipmap-xxxhdpi_ic_launcher_round.png.flat",
+        "source": "com.example.jokesquotesandtrivia.app-main-49:/mipmap-xxxhdpi/ic_launcher_round.png"
     },
     {
-        "merged": "C:\\Users\\joshu\\AndroidStudioProjects\\JokesQuotesAndTrivia\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher_round.png.flat",
-        "source": "C:\\Users\\joshu\\AndroidStudioProjects\\JokesQuotesAndTrivia\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_round.png"
+        "merged": "com.example.jokesquotesandtrivia.app-merged_res-47:/layout_fragment_main.xml.flat",
+        "source": "com.example.jokesquotesandtrivia.app-main-49:/layout/fragment_main.xml"
     },
     {
-        "merged": "C:\\Users\\joshu\\AndroidStudioProjects\\JokesQuotesAndTrivia\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_jokes.xml.flat",
-        "source": "C:\\Users\\joshu\\AndroidStudioProjects\\JokesQuotesAndTrivia\\app\\src\\main\\res\\layout\\fragment_jokes.xml"
+        "merged": "com.example.jokesquotesandtrivia.app-merged_res-47:/mipmap-mdpi_ic_launcher.png.flat",
+        "source": "com.example.jokesquotesandtrivia.app-main-49:/mipmap-mdpi/ic_launcher.png"
     },
     {
-        "merged": "C:\\Users\\joshu\\AndroidStudioProjects\\JokesQuotesAndTrivia\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher.png.flat",
-        "source": "C:\\Users\\joshu\\AndroidStudioProjects\\JokesQuotesAndTrivia\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png"
+        "merged": "com.example.jokesquotesandtrivia.app-merged_res-47:/layout_activity_main.xml.flat",
+        "source": "com.example.jokesquotesandtrivia.app-main-49:/layout/activity_main.xml"
     },
     {
-        "merged": "C:\\Users\\joshu\\AndroidStudioProjects\\JokesQuotesAndTrivia\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_trivia.xml.flat",
-        "source": "C:\\Users\\joshu\\AndroidStudioProjects\\JokesQuotesAndTrivia\\app\\src\\main\\res\\layout\\fragment_trivia.xml"
+        "merged": "com.example.jokesquotesandtrivia.app-merged_res-47:/mipmap-xhdpi_ic_launcher_round.png.flat",
+        "source": "com.example.jokesquotesandtrivia.app-main-49:/mipmap-xhdpi/ic_launcher_round.png"
     },
     {
-        "merged": "C:\\Users\\joshu\\AndroidStudioProjects\\JokesQuotesAndTrivia\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v24_ic_launcher_foreground.xml.flat",
-        "source": "C:\\Users\\joshu\\AndroidStudioProjects\\JokesQuotesAndTrivia\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v24\\ic_launcher_foreground.xml"
+        "merged": "com.example.jokesquotesandtrivia.app-merged_res-47:/mipmap-hdpi_ic_launcher.png.flat",
+        "source": "com.example.jokesquotesandtrivia.app-main-49:/mipmap-hdpi/ic_launcher.png"
     },
     {
-        "merged": "C:\\Users\\joshu\\AndroidStudioProjects\\JokesQuotesAndTrivia\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher.png.flat",
-        "source": "C:\\Users\\joshu\\AndroidStudioProjects\\JokesQuotesAndTrivia\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png"
+        "merged": "com.example.jokesquotesandtrivia.app-merged_res-47:/mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "com.example.jokesquotesandtrivia.app-main-49:/mipmap-xhdpi/ic_launcher.png"
     },
     {
-        "merged": "C:\\Users\\joshu\\AndroidStudioProjects\\JokesQuotesAndTrivia\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher_round.png.flat",
-        "source": "C:\\Users\\joshu\\AndroidStudioProjects\\JokesQuotesAndTrivia\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_round.png"
+        "merged": "com.example.jokesquotesandtrivia.app-merged_res-47:/mipmap-mdpi_ic_launcher_round.png.flat",
+        "source": "com.example.jokesquotesandtrivia.app-main-49:/mipmap-mdpi/ic_launcher_round.png"
     },
     {
-        "merged": "C:\\Users\\joshu\\AndroidStudioProjects\\JokesQuotesAndTrivia\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher_round.png.flat",
-        "source": "C:\\Users\\joshu\\AndroidStudioProjects\\JokesQuotesAndTrivia\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_round.png"
+        "merged": "com.example.jokesquotesandtrivia.app-merged_res-47:/mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "com.example.jokesquotesandtrivia.app-main-49:/mipmap-xxhdpi/ic_launcher.png"
     },
     {
-        "merged": "C:\\Users\\joshu\\AndroidStudioProjects\\JokesQuotesAndTrivia\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_launcher_background.xml.flat",
-        "source": "C:\\Users\\joshu\\AndroidStudioProjects\\JokesQuotesAndTrivia\\app\\src\\main\\res\\drawable\\ic_launcher_background.xml"
+        "merged": "com.example.jokesquotesandtrivia.app-merged_res-47:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "com.example.jokesquotesandtrivia.app-main-49:/mipmap-anydpi-v26/ic_launcher_round.xml"
     },
     {
-        "merged": "C:\\Users\\joshu\\AndroidStudioProjects\\JokesQuotesAndTrivia\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher.xml.flat",
-        "source": "C:\\Users\\joshu\\AndroidStudioProjects\\JokesQuotesAndTrivia\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher.xml"
+        "merged": "com.example.jokesquotesandtrivia.app-merged_res-47:/drawable_ic_launcher_background.xml.flat",
+        "source": "com.example.jokesquotesandtrivia.app-main-49:/drawable/ic_launcher_background.xml"
     },
     {
-        "merged": "C:\\Users\\joshu\\AndroidStudioProjects\\JokesQuotesAndTrivia\\app\\build\\intermediates\\res\\merged\\debug\\navigation_nav_graph.xml.flat",
-        "source": "C:\\Users\\joshu\\AndroidStudioProjects\\JokesQuotesAndTrivia\\app\\src\\main\\res\\navigation\\nav_graph.xml"
+        "merged": "com.example.jokesquotesandtrivia.app-merged_res-47:/drawable-v24_ic_launcher_foreground.xml.flat",
+        "source": "com.example.jokesquotesandtrivia.app-main-49:/drawable-v24/ic_launcher_foreground.xml"
     },
     {
-        "merged": "C:\\Users\\joshu\\AndroidStudioProjects\\JokesQuotesAndTrivia\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_main.xml.flat",
-        "source": "C:\\Users\\joshu\\AndroidStudioProjects\\JokesQuotesAndTrivia\\app\\src\\main\\res\\layout\\fragment_main.xml"
+        "merged": "com.example.jokesquotesandtrivia.app-merged_res-47:/mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "com.example.jokesquotesandtrivia.app-main-49:/mipmap-xxxhdpi/ic_launcher.png"
     },
     {
-        "merged": "C:\\Users\\joshu\\AndroidStudioProjects\\JokesQuotesAndTrivia\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_quotes.xml.flat",
-        "source": "C:\\Users\\joshu\\AndroidStudioProjects\\JokesQuotesAndTrivia\\app\\src\\main\\res\\layout\\fragment_quotes.xml"
+        "merged": "com.example.jokesquotesandtrivia.app-merged_res-47:/mipmap-xxhdpi_ic_launcher_round.png.flat",
+        "source": "com.example.jokesquotesandtrivia.app-main-49:/mipmap-xxhdpi/ic_launcher_round.png"
     },
     {
-        "merged": "C:\\Users\\joshu\\AndroidStudioProjects\\JokesQuotesAndTrivia\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher_round.png.flat",
-        "source": "C:\\Users\\joshu\\AndroidStudioProjects\\JokesQuotesAndTrivia\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_round.png"
+        "merged": "com.example.jokesquotesandtrivia.app-merged_res-47:/navigation_nav_graph.xml.flat",
+        "source": "com.example.jokesquotesandtrivia.app-main-49:/navigation/nav_graph.xml"
     },
     {
-        "merged": "C:\\Users\\joshu\\AndroidStudioProjects\\JokesQuotesAndTrivia\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
-        "source": "C:\\Users\\joshu\\AndroidStudioProjects\\JokesQuotesAndTrivia\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher_round.xml"
+        "merged": "com.example.jokesquotesandtrivia.app-merged_res-47:/drawable_heading_background.xml.flat",
+        "source": "com.example.jokesquotesandtrivia.app-main-49:/drawable/heading_background.xml"
     },
     {
-        "merged": "C:\\Users\\joshu\\AndroidStudioProjects\\JokesQuotesAndTrivia\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_main.xml.flat",
-        "source": "C:\\Users\\joshu\\AndroidStudioProjects\\JokesQuotesAndTrivia\\app\\src\\main\\res\\layout\\activity_main.xml"
+        "merged": "com.example.jokesquotesandtrivia.app-merged_res-47:/mipmap-hdpi_ic_launcher_round.png.flat",
+        "source": "com.example.jokesquotesandtrivia.app-main-49:/mipmap-hdpi/ic_launcher_round.png"
     },
     {
-        "merged": "C:\\Users\\joshu\\AndroidStudioProjects\\JokesQuotesAndTrivia\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher_round.png.flat",
-        "source": "C:\\Users\\joshu\\AndroidStudioProjects\\JokesQuotesAndTrivia\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_round.png"
+        "merged": "com.example.jokesquotesandtrivia.app-merged_res-47:/layout_fragment_trivia.xml.flat",
+        "source": "com.example.jokesquotesandtrivia.app-main-49:/layout/fragment_trivia.xml"
     }
 ]

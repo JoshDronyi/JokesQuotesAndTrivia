@@ -28,7 +28,7 @@
     </fragment>
     <fragment
         android:id="@+id/jokesFragment"
-        android:name="com.example.jokesquotesandtrivia.uiLayer.JokesFragment"
+        android:name="com.example.jokesquotesandtrivia.uiLayer.jokeScreens.JokesFragment"
         android:label="fragment_jokes"
         tools:layout="@layout/fragment_jokes" >
         <action

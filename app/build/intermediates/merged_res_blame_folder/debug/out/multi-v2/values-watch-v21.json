@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\joshu\\AndroidStudioProjects\\JokesQuotesAndTrivia\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-watch-v21\\values-watch-v21.xml",
+            "outputFile": "com.example.jokesquotesandtrivia.app-mergeDebugResources-45:/values-watch-v21/values-watch-v21.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\joshu\\.gradle\\caches\\transforms-2\\files-2.1\\468665f1075a99ba7588939b5577d0f9\\appcompat-1.2.0\\res\\values-watch-v21\\values-watch-v21.xml",
+                    "source": "/Users/joshuadronyi/.gradle/caches/transforms-3/c711278cf5fb58c14a4fc0a2e4700735/transformed/appcompat-1.5.1/res/values-watch-v21/values-watch-v21.xml",
                     "from": {
                         "startLines": "2,6,10",
                         "startColumns": "4,4,4",

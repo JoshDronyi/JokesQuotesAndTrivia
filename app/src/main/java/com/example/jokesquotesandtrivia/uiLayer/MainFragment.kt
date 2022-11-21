@@ -13,8 +13,6 @@ class MainFragment : Fragment() {
 
     private var _binding: FragmentMainBinding? = null
 
-    val binding get() = _binding!!
-
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -24,12 +22,11 @@ class MainFragment : Fragment() {
 
         val controller = this.findNavController()
 
-
-        binding.jokeQuoteButton.setOnClickListener {
+        _binding?.jokeQuoteButton?.setOnClickListener {
             controller.navigate(R.id.jokesFragment)
         }
 
-        binding.triviaButton.setOnClickListener {
+        _binding?.triviaButton?.setOnClickListener {
             controller.navigate(R.id.triviaFragment)
         }
 
@@ -42,6 +39,4 @@ class MainFragment : Fragment() {
         super.onDestroy()
         _binding = null
     }
-
-
 }
